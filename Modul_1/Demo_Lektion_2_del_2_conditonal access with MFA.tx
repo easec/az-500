@@ -1,0 +1,34 @@
+Demonstrations – Azure AD Identity Protection
+In this demonstration, we will test conditonal access.
+
+Task 1 - Configure Conditional Access (require MFA)
+Note: This task requires a user account, AZ500User. This user requires xxx permissions. If you want to 
+show the MFA verification, the user account must have a phone number.
+In this task, we will review conditional access policy settings and create a policy that requires MFA when 
+signing in to the Portal.
+
+Configure the policy
+1. In the Portal search for and select Azure Active Directory.
+2. Under Manage select Security.
+3. Under Protect select Conditional access.
+4. Click New Policy.
+● Name: AZ500Policy1
+● Users and groups > Select users and groups > Users and Groups > Select: AZ500User1
+● Cloud apps or actions > Select apps > Select: Microsoft Azure Management
+● Review the warning that this policy impacts Portal access.
+● Conditions > Sign-in risk > Review the risk levels
+● Device platforms > Review the devices that can included, such as Android and iOS.
+● Locations > Review the physical location selections.
+● Under Access controls click Grant.
+● Review the Grant options such as MFA. You may require one or more of the controls.
+● Select Require multi-factor authentication.
+● For Enable policy select On.
+5. Click Create.
+
+Test the policy
+1. Sign-in to the Portal as the AZ500User1.
+2. Before you can sign in a second authentication is required.
+3. If you have a phone number associated with the user, provide and verify the text code. You should be 
+able to successfully sign in to the Portal.
+4. If you do not have a phone number associated with the user, this demonstrates that MFA is in effect.
+5. You may want to return to the AZ500Policy1 and turn the policy Off.
