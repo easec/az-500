@@ -3,7 +3,7 @@
 ● Name: myVNet1.
 ● Address:10.1.0.0/16.
 ● Subscription: Select your subscription.
-● Resource group: Select new or choose an existing resource group
+● Resource group: Select new or choose an existing resource group ResourceGroupName virtual_networkrg
 ● Location - Select your location
 ● Subnet - Enter mySubnet1.
 ● Subnet - Address range: 10.1.0.0/24
@@ -12,7 +12,7 @@
 
 Create a virtual network using PowerShell
 1. Create a virtual network. Use values as appropriate.
-$myVNet2 = New-AzVirtualNetwork -ResourceGroupName myResourceGroup -Location northeurope -Name myVNet2 -AddressPrefix 10.0.0.0/16
+$myVNet2 = New-AzVirtualNetwork -ResourceGroupName virtual_networkrg -Location northeurope -Name myVNet2 -AddressPrefix 10.0.0.0/16
 2. Verify your new virtual network information.
 Get-AzVirtualNetwork -Name myVNet2
 3. Create a subnet. Use values as appropriate.
